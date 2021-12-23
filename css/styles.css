@@ -131,7 +131,7 @@ header {
 
 /* Make the curse turns into a finger (pointer) */
 
-.menuIcon div {
+.menuIcon span {
   display: block;
   background-color: #fff;
   height: 3px;
