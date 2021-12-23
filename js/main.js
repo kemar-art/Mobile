@@ -4,5 +4,5 @@ const barras = document.querySelectorAll('.menuIcon div');
 
 menuIcon.addEventListener('click', () => {
   menu.classList.toggle('active');
-  barras.forEach((child) => {child.classList.toggle('animated'); });
+  barras.forEach((child) => { child.classList.toggle('animated'); });
 });
