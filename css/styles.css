@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body > * {
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.top-navbar .logo,
+.link-text,
+.link-text1 {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: calc(40px - 16px);
+}
+
+.ul-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ul-list .list-item-text {
+  padding: 10px 12px;
+}
+
+@media (max-width: 768px) {
+  .top-navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #3e3c3c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .top-navbar .logo {
+    display: none;
+  }
+
+  .top-navbar .menu-list .link-text1 {
+    display: none;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    justify-content: inherit;
+    display: none;
+    opacity: 0;
+  }
+
+  /* Make the humburger bar turns into a (X) */
+
+  @keyframes muestraMenu {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .menu-list.active {
+    display: flex;
+    animation: muestraMenu 350ms ease-in-out both;
+  }
+
+  .bar-1.animated {
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+
+  .bar-2.animated {
+    opacity: 0;
+  }
+
+  .bar-3.animated {
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+  /* Controle the dropdown menu start here */
+
+  .menu-list li a {
+    width: 2px;
+    display: flex;
+    font-size: 32px;
+    line-height: 44px;
+    margin-left: 40px;
+    bottom: 50px;
+  }
+
+  .top-navbar .menu-list .hr-bar1 {
+    border: 1px solid #6f6c6b;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+/* Control the humburger icon starts here */
+
+/* Make the curse turns into a finger (pointer) */
+
+.menuIcon div {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  width: 28px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+.menuIcon {
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  .top-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e3c3c;
+    padding: 1px 24px;
+  }
+
+  .top-navbar .menu-list {
+    display: flex;
+  }
+
+  .top-navbar .menuIcon {
+    display: none;
+  }
+
+  .top-navbar a:hover {
+    animation: colorChange 0.5s forwards, textChange 0.5s forwards;
+  }
+
+  .top-navbar .menu-list .hr-bar1 {
+    display: none;
+  }
+
+  .hr-bar2 {
+    display: none;
+  }
+
+  @keyframes colorChange {
+    0% {
+      color: white;
+    }
+
+    100% {
+      color: #f55800;
+    }
+  }
+
+  @keyframes textChange {
+    0% {
+      font-size: 14px;
+    }
+
+    100% {
+      font-size: 20px;
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
+  }
+}
