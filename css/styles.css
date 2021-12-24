@@ -47,6 +47,10 @@ header {
   line-height: calc(40px - 16px);
 }
 
+.top-navbar .logo {
+  padding-left: 20px;
+}
+
 .ul-list {
   list-style: none;
   display: flex;
@@ -64,13 +68,13 @@ header {
     flex-direction: column;
     align-items: flex-start;
     background-color: #3e3c3c;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 
-  .top-navbar .logo {
+  /* .top-navbar .logo {
     display: none;
-  }
+  } */
 
   .top-navbar .menu-list .link-text1 {
     display: none;
@@ -78,7 +82,7 @@ header {
 
   .menu-list {
     flex-direction: column;
-    height: 500px;
+    height: 46.9rem;
     width: 100%;
     justify-content: inherit;
     display: none;
@@ -148,8 +152,73 @@ header {
   background-color: transparent;
   display: block;
   position: absolute;
-  top: -5px;
+  top: -2px;
   right: 25px;
+}
+
+/* Landing page styling starts here */
+.first-page {
+  background: #1c1a19;
+  background-image: url(../images/illustration-header-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 150px auto;
+  padding: 0 24px 100px 24px;
+}
+
+.first-page > * {
+  margin: 12px 0;
+}
+
+h1.first-pagetitle {
+  font-family: 'Crete Round', serif;
+  font-weight: normal;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  width: 100%;
+  padding-top: 65px;
+}
+
+.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff5e1;
+}
+
+.description-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff5e1;
+}
+
+/* control social media icons horizontally */
+.social-mediaIcons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  color: #dbd8d7;
+}
+
+/* Control the spacing of the social media icons */
+.list-item-icon {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+/* Control mobile media icons and give colour to all media icons */
+a.link-icon {
+  text-decoration: none;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 @media screen and (min-width: 992px) {
@@ -180,6 +249,44 @@ header {
 
   .hr-bar2 {
     display: none;
+  }
+
+  /* Landing page starts here */
+  .first-page {
+    background-image: url(../images/illustration-header.svg);
+    background-position: right center;
+    background-size: auto 600px;
+    padding: 150px 100px 100px 100px;
+    position: relative;
+  }
+
+  h1.first-pagetitle {
+    font-size: 72px;
+    line-height: 81px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .description-text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .first-pagetitle,
+  .subtitle,
+  .description-text {
+    width: 466px;
+  }
+
+  /* align social media icon vertical */
+  .social-mediaIcons {
+    flex-direction: column;
+    position: absolute;
+    left: 20px;
+    top: calc(50% + 25px - (40px * 5) / 2);
   }
 
   @keyframes colorChange {
